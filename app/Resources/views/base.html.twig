@@ -7,9 +7,25 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet"
             href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{asset('assets/styles/header.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/styles/footer.css')}}">
     </head>
     <body>
+        <header>
+            
+            <img class= "header_logo" src="http://toplogos.ru/images/thumbs/preview-logo-alfa-bank.jpg"  alt="Логотип Альфа-Банк" />
+            <div class="header_text_wrap">
+                <p class = "header_text">AlfaBank test task</p>
+            </div>
+    </header>
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+        <footer>
+            <p class = "footer_text">
+                Created by Aleksey Chepurko
+            </p>
+        </footer>
     </body>
 </html>
