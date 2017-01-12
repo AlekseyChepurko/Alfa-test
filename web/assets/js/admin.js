@@ -1,10 +1,12 @@
 $(document).ready(function () {		
 
-	$(".send_limits_btn").click(function (e) {
+	$(".limitations_form").submit(function (e) {
 		e.preventDefault();
 
 		$(".save_text").toggle();
 		$(".wait_text").toggle();
+
+		$(".send_limits_btn").prop("disabled", true);
 
 		var form = $(".limitations_form").serialize();
 
@@ -18,6 +20,7 @@ $(document).ready(function () {
 				setTimeout(function () {
 					$(".success_text").toggle();
 					$(".save_text").toggle();
+					$(".send_limits_btn").prop("disabled", false);
 				}, 1000);
 			},
 
@@ -28,6 +31,7 @@ $(document).ready(function () {
 				setTimeout(function () {
 					$(".fail_text").toggle();
 					$(".save_text").toggle();
+					$(".send_limits_btn").prop("disabled", false);
 				}, 1000);			 
 				console.log(response);
 			}
