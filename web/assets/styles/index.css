@@ -33,3 +33,36 @@ input[type=radio] + div {
 	background-color: white;
 	color: black;
 } 
+
+.send_pay_btn{
+	outline: none;
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
+	background-color: #C24438;
+	color: white;
+	border-radius: 10px;
+	border: 0;
+	box-shadow:  0 0 10px rgba(0,0,0,0.5);
+	transition: all .5s;
+	margin: 10px auto;
+	display: block;
+}
+
+.send_pay_btn:hover {
+	box-shadow:  0 0 15px rgba(0,0,0,.9);
+}
+
+.pay_sum>input{
+	outline-color: #C24438;
+	width: 100%;
+	max-width: 300px;
+	padding: 5px;
+	margin: 10px auto;
+	display: block;
+}
+
+.response_text {
+	text-align: center;
+	height: 20px;
+}

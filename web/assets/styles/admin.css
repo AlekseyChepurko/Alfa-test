@@ -51,8 +51,17 @@
 	margin: 0 0 20px 0;
 }
 .send_limits_btn{
+	outline: none;
+	border: 0;
+	color: white;
+	background-color: #C24438;
+	border-radius: 10px;
 	width: 100%;
 	height: 50px;
+}
+
+.success_text{
+	color: #1bd32a;
 }
 
 .day_limit {

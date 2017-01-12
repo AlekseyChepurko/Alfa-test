@@ -3,14 +3,14 @@
 {% block body %}
     <div id="wrapper">
         <div id="container">
-            <form action="">
+            <form action="" class="pay_form">
                     
                 <div class="pay_wrap">
                     <div class="choose_pay_way_text">
                         Выберите предполагаемый способ оплаты, с помощью которого был произведен платеж:
                     </div>
                     <label for="mobile">
-                        <input class="hidden_block" id="mobile" type="radio" name="pay_way" value="mobile">
+                        <input class="hidden_block" id="mobile" type="radio" name="pay_way" value="mobile" checked>
                         <div class="pay_way">
                             <div class="pay_way_text">
                                 С помощью мобильного банка
@@ -42,6 +42,18 @@
                         </div>
                     </label>
                 </div>
+                
+                <div class="pay_sum">
+                    <input type="number" placeholder="Введите сумму платежа" required="true">
+                </div>
+        
+                <button class="send_pay_btn">
+                    <span class="send_pay_text">Эмулировать</span>
+                </button>
+
+                <div class="response_text">
+                    
+                </div>
 
             </form>
         </div>
@@ -50,4 +62,8 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{asset('assets/styles/index.css')}}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/index.js') }}"></script>
 {% endblock %}

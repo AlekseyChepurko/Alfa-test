@@ -5,7 +5,9 @@ footer{
 }
 
 .footer_text{
-	// text-align: center;
+	background-color: #C24438;
+	color: white;
 	width: 80%;
+	padding: 10px;
 	margin: auto;
 }
