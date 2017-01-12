@@ -18,7 +18,8 @@ class AdminController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $limits = $em->getRepository('AppBundle:PayLimits')->findAll();
-        $limits = $limits[ count($limits)-1 ];
+        if(count($limits) > 0)
+            $limits = $limits[ count($limits)-1 ];
 
         return $this->render('default/admin.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
