@@ -14,9 +14,9 @@
 							Через мобильный
 						</div>
 						<div class="bounds_wrap">
-							<input class="bound" type="number" min="0" required="true" placeholder="От" name="mobileMin">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" name="mobileMin" value="{{ limits.mobileMinBound }}">
 							<div class="dash_block">-</div>
-							<input class="bound" type="number" required="true" placeholder="До" name="mobileMax">
+							<input class="bound" type="number" min="0" required="true" placeholder="До" name="mobileMax" value="{{ limits.mobileMaxBound }}">
 						</div>
 					</div>
 
@@ -25,9 +25,9 @@
 							Через интернет
 						</div>
 						<div class="bounds_wrap">
-							<input class="bound" type="number" min="0" required="true" placeholder="От" name="internetMin">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" name="internetMin" value="{{ limits.internetMinBound }}">
 							<div class="dash_block">-</div>
-							<input class="bound" type="number" required="true" placeholder="До" name="internetMax">
+							<input class="bound" type="number" min="0" required="true" placeholder="До" name="internetMax" value="{{ limits.internetMaxBound }}">
 						</div>
 					</div>
 
@@ -36,9 +36,9 @@
 							Через банкомат
 						</div>
 						<div class="bounds_wrap">
-							<input class="bound" type="number" min="0" required="true" placeholder="От" name="atmMin">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" name="atmMin" value="{{ limits.atmMinBound }}">
 							<div class="dash_block">-</div>
-							<input class="bound" type="number" required="true" placeholder="До" name="atmMax">
+							<input class="bound" type="number" min="0" required="true" placeholder="До" name="atmMax" value="{{ limits.atmMaxBound }}">
 						</div>
 					</div>
 
@@ -46,7 +46,7 @@
 						<div class="bounds_text">
 							Суммарное ограничение на платежи
 						</div>
-						<input class="bound" type="number" required="true" placeholder="До" name="summaryMaxBound">
+						<input class="bound" type="number" required="true" min="0" placeholder="До" name="summaryMaxBound" value="{{ limits.summaryMaxBound }}">
 					</div>
 					<button class = "send_limits_btn">
 						<span class="save_text">Сохранить</span>
