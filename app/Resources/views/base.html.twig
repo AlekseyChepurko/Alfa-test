@@ -21,12 +21,13 @@
     </header>
 
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-
         <footer>
             <p class = "footer_text">
                 Created by Aleksey Chepurko
             </p>
         </footer>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

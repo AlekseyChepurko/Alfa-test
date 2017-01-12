@@ -50,9 +50,9 @@
 					</div>
 					<button class = "send_limits_btn">
 						<span class="save_text">Сохранить</span>
-						<span class="wait_text hidden">Подождите...</span>
-						<span class="success_text hidden">Сохранено</span>
-						<span class="fail_text hidden">Ошибка</span>
+						<span class="wait_text hidden_block">Подождите...</span>
+						<span class="success_text hidden_block">Сохранено</span>
+						<span class="fail_text hidden_block">Ошибка</span>
 					</button>
 					
 				</form>
@@ -65,6 +65,9 @@
 
 
 {% block stylesheets %}
-
 	<link rel="stylesheet" href="{{asset('assets/styles/admin.css')}}">
+{% endblock %}
+
+{% block javascripts %}
+	<script src="{{ asset('assets/js/admin.js') }}"></script>
 {% endblock %}
