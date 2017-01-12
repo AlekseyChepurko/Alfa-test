@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+        	<div class="limitations_wrap">
+				<form action="#" class="limitations_form">
+					<div class="limitations_header">
+						Введите ограничения на платежи:
+						<div class="underline_block_solid"></div>
+					</div>
+					<div class="mobile_bounds bounds">
+						<div class="bounds_text"> 
+							Через мобильный
+						</div>
+						<div class="bounds_wrap">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="min">
+							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="max">
+						</div>
+					</div>
+
+					<div class="internet_bounds bounds">
+						<div class="bounds_text">
+							Через интернет
+						</div>
+						<div class="bounds_wrap">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="min">
+							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="max">
+						</div>
+					</div>
+
+					<div class="atm_bounds bounds">
+						<div class="bounds_text">
+							Через банкомат
+						</div>
+						<div class="bounds_wrap">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="min">
+							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="max">
+						</div>
+					</div>
+
+					<div class="summary_limit">
+						<div class="bounds_text">
+							Суммарное ограничение на платежи
+						</div>
+						<input class="bound" type="number" required="true" placeholder="До">
+					</div>
+
+					<input type="submit" value="Установить" class="send_limits_btn">
+				</form>
+
+        	</div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{% block stylesheets %}
+
+	<link rel="stylesheet" href="{{asset('assets/styles/admin.css')}}">
+{% endblock %}
