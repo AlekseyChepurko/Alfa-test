@@ -1,0 +1,35 @@
+.pay_way {
+	display: inline-block;
+	border-radius: 10px;
+	color: black;
+}
+
+.pay_way:hover{
+	background-color: rgba(194,68,56, .8);
+	transition: all .5s;
+
+}
+.pay_way:hover>.pay_way_text{
+	color: white;
+
+}
+.pay_way_image{
+	max-height: 200px;
+	padding: 10px;
+}
+
+.pay_way_text {
+	margin: 10px;
+	border-bottom: 2px solid #C24438;
+}
+
+input[type=radio]:checked + div {
+  background-color: #C24438;
+  color: white;
+} 
+
+input[type=radio] + div {
+	transition: all .5s;
+	background-color: white;
+	color: black;
+} 
