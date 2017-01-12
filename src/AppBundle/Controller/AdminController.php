@@ -38,12 +38,42 @@ class AdminController extends Controller
             $limits = $em->getRepository('AppBundle:PayLimits')->findOneById($lastId);
         }
         
-        $limits->setMobileMinBound($request->get("mobileMin"));
-        $limits->setMobileMaxBound($request->get("mobileMax"));
-        $limits->setInternetMinBound($request->get("internetMin"));
-        $limits->setInternetMaxBound($request->get("internetMax"));
-        $limits->setAtmMinBound($request->get("atmMin"));
-        $limits->setAtmMaxBound($request->get("atmMax"));
+        $limits->setMobileMinBound(
+            min(
+                $request->get("mobileMin"),
+                $request->get("mobileMax"))
+            );
+
+        $limits->setMobileMaxBound(
+            max(
+                $request->get("mobileMin"),
+                $request->get("mobileMax"))
+            );
+        
+        $limits->setInternetMinBound(
+            min(
+                $request->get("internetMin"),
+                $request->get("internetMax"))
+            );
+        
+        $limits->setInternetMaxBound(
+            max(
+                $request->get("internetMin"),
+                $request->get("internetMax"))
+            );
+        
+        $limits->setAtmMinBound(
+            min(
+                $request->get("atmMin"),
+                $request->get("atmMax"))
+            );
+        
+        $limits->setAtmMaxBound(
+            max(
+                $request->get("atmMax"),
+                $request->get("atmMin"))
+                );
+        
         $limits->setSummaryMaxBound($request->get("summaryMaxBound"));
 
         $em->persist($limits);
