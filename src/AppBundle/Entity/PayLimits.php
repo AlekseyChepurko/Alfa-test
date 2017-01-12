@@ -4,85 +4,249 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-class PayLimits{
+/**
+ * PayLimits
+ *
+ * @ORM\Table(name="pay_limits")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PayLimitsRepository")
+ */
+class PayLimits
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
 
-    private static $mobileMaxBound = 0;
-    private static $mobileMinBound = 0;
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="mobileMaxBound", type="float")
+     */
+    private $mobileMaxBound;
 
-    private static $internetMaxBound = 0;
-    private static $internetMinBound = 0;
-    
-    private static $atmMaxBound = 0;
-    private static $atmMinBound = 0;
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="mobileMinBound", type="float")
+     */
+    private $mobileMinBound;
 
-    private static $summaryMaxBound = 0;
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="internetMaxBound", type="float")
+     */
+    private $internetMaxBound;
 
-    public static function getMobileMaxBound()
-     {
-         return $mobileMaxBound;
-     }
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="internetMinBound", type="float")
+     */
+    private $internetMinBound;
 
-     public static function getMobileMinBound()
-      {
-          return $mobileMinBound;
-      } 
-     public static function setMobileMaxBound($value=0)
-     {
-         $mobileMaxBound = $value;
-     }
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="atmMaxBound", type="float")
+     */
+    private $atmMaxBound;
 
-     public static function setMobileMinBound($value=0)
-     {
-         $mobileMinBound = $value;
-     }
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="atmMinBound", type="float")
+     */
+    private $atmMinBound;
 
-     public static function getInternetMaxBound()
-     {
-         return $internetMaxBound;
-     }
-
-     public static function getInternetMinBound()
-      {
-          return $intenetMinBound;
-      } 
-     public static function setInternetMaxBound($value=0)
-     {
-         $internetMaxBound = $value;
-     }
-
-     public static function setInternetMinBound($value=0)
-     {
-         $internetMinBound = $value;
-     }
-
-     public static function getAtmMaxBound()
-     {
-         return $atmMaxBound;
-     }
-
-     public function getAtmMinBound()
-      {
-          return $atmMinBound;
-      } 
-     public static function setAtmMaxBound($value=0)
-     {
-         $atmMaxBound = $value;
-     }
-
-     public static function setAtmMinBound($value=0)
-     {
-         $atmMinBound = $value;
-     }
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="summaryMaxBound", type="float")
+     */
+    private $summaryMaxBound;
 
 
-     public static function getSummaryMaxBound()
-     {
-         return $summaryMaxBound;
-     }
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
-     public static function setSummaryMaxBound($value=0)
-     {
-         $summaryMaxBound = $value;
-     }
+    /**
+     * Set mobileMaxBound
+     *
+     * @param float $mobileMaxBound
+     *
+     * @return PayLimits
+     */
+    public function setMobileMaxBound($mobileMaxBound)
+    {
+        $this->mobileMaxBound = $mobileMaxBound;
+
+        return $this;
+    }
+
+    /**
+     * Get mobileMaxBound
+     *
+     * @return float
+     */
+    public function getMobileMaxBound()
+    {
+        return $this->mobileMaxBound;
+    }
+
+    /**
+     * Set mobileMinBound
+     *
+     * @param float $mobileMinBound
+     *
+     * @return PayLimits
+     */
+    public function setMobileMinBound($mobileMinBound)
+    {
+        $this->mobileMinBound = $mobileMinBound;
+
+        return $this;
+    }
+
+    /**
+     * Get mobileMinBound
+     *
+     * @return float
+     */
+    public function getMobileMinBound()
+    {
+        return $this->mobileMinBound;
+    }
+
+    /**
+     * Set internetMaxBound
+     *
+     * @param float $internetMaxBound
+     *
+     * @return PayLimits
+     */
+    public function setInternetMaxBound($internetMaxBound)
+    {
+        $this->internetMaxBound = $internetMaxBound;
+
+        return $this;
+    }
+
+    /**
+     * Get internetMaxBound
+     *
+     * @return float
+     */
+    public function getInternetMaxBound()
+    {
+        return $this->internetMaxBound;
+    }
+
+    /**
+     * Set internetMinBound
+     *
+     * @param float $internetMinBound
+     *
+     * @return PayLimits
+     */
+    public function setInternetMinBound($internetMinBound)
+    {
+        $this->internetMinBound = $internetMinBound;
+
+        return $this;
+    }
+
+    /**
+     * Get internetMinBound
+     *
+     * @return float
+     */
+    public function getInternetMinBound()
+    {
+        return $this->internetMinBound;
+    }
+
+    /**
+     * Set atmMaxBound
+     *
+     * @param float $atmMaxBound
+     *
+     * @return PayLimits
+     */
+    public function setAtmMaxBound($atmMaxBound)
+    {
+        $this->atmMaxBound = $atmMaxBound;
+
+        return $this;
+    }
+
+    /**
+     * Get atmMaxBound
+     *
+     * @return float
+     */
+    public function getAtmMaxBound()
+    {
+        return $this->atmMaxBound;
+    }
+
+    /**
+     * Set atmMinBound
+     *
+     * @param float $atmMinBound
+     *
+     * @return PayLimits
+     */
+    public function setAtmMinBound($atmMinBound)
+    {
+        $this->atmMinBound = $atmMinBound;
+
+        return $this;
+    }
+
+    /**
+     * Get atmMinBound
+     *
+     * @return float
+     */
+    public function getAtmMinBound()
+    {
+        return $this->atmMinBound;
+    }
+
+    /**
+     * Set summaryMaxBound
+     *
+     * @param float $summaryMaxBound
+     *
+     * @return PayLimits
+     */
+    public function setSummaryMaxBound($summaryMaxBound)
+    {
+        $this->summaryMaxBound = $summaryMaxBound;
+
+        return $this;
+    }
+
+    /**
+     * Get summaryMaxBound
+     *
+     * @return float
+     */
+    public function getSummaryMaxBound()
+    {
+        return $this->summaryMaxBound;
+    }
 }
-    
+

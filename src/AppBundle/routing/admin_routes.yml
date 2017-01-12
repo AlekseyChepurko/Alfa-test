@@ -1,3 +1,7 @@
 admin_page:
   path: /
   defaults: { _controller: AppBundle:Admin:index }
+
+save_limits:
+  path: /save_limits
+  defaults: { _controller: AppBundle:Admin:saveLimits }

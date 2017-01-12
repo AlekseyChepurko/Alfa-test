@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div id="container">
         	<div class="limitations_wrap">
-				<form action="#" class="limitations_form">
+				<form action="{{ path('save_limits') }}" class="limitations_form" method="post">
 					<div class="limitations_header">
 						Введите ограничения на платежи:
 						<div class="underline_block_solid"></div>
@@ -14,8 +14,9 @@
 							Через мобильный
 						</div>
 						<div class="bounds_wrap">
-							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="min">
-							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="max">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="mobileMin">
+							<div class="dash_block">-</div>
+							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="mobileMax">
 						</div>
 					</div>
 
@@ -24,8 +25,9 @@
 							Через интернет
 						</div>
 						<div class="bounds_wrap">
-							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="min">
-							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="max">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="internetMin">
+							<div class="dash_block">-</div>
+							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="internetMax">
 						</div>
 					</div>
 
@@ -34,8 +36,9 @@
 							Через банкомат
 						</div>
 						<div class="bounds_wrap">
-							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="min">
-							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="max">
+							<input class="bound" type="number" min="0" required="true" placeholder="От" step="0.1" name="atmMin">
+							<div class="dash_block">-</div>
+							<input class="bound" type="number" required="true" placeholder="До" step="0.1" name="atmMax">
 						</div>
 					</div>
 
@@ -43,10 +46,15 @@
 						<div class="bounds_text">
 							Суммарное ограничение на платежи
 						</div>
-						<input class="bound" type="number" required="true" placeholder="До">
+						<input class="bound" type="number" required="true" placeholder="До" name="summaryMaxBound">
 					</div>
-
-					<input type="submit" value="Установить" class="send_limits_btn">
+					<button class = "send_limits_btn">
+						<span class="save_text">Сохранить</span>
+						<span class="wait_text hidden">Подождите...</span>
+						<span class="success_text hidden">Сохранено</span>
+						<span class="fail_text hidden">Ошибка</span>
+					</button>
+					
 				</form>
 
         	</div>
