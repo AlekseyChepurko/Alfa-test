@@ -30,6 +30,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start; 
+	margin: 5px auto;
 }
 .bounds{
 	margin: 0 0 10px 0;
@@ -54,3 +55,8 @@
 	height: 50px;
 }
 
+.day_limit {
+	width: 100%;
+	padding: 5px;
+	margin: 5px 0;
+}

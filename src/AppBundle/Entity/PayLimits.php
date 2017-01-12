@@ -38,9 +38,23 @@ class PayLimits
     /**
      * @var float
      *
+     * @ORM\Column(name="mobileMaxDay", type="float")
+     */
+    private $mobileMaxDay;
+
+    /**
+     * @var float
+     *
      * @ORM\Column(name="internetMaxBound", type="float")
      */
     private $internetMaxBound;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="internetMaxDay", type="float")
+     */
+    private $internetMaxDay;
 
     /**
      * @var float
@@ -62,6 +76,13 @@ class PayLimits
      * @ORM\Column(name="atmMinBound", type="float")
      */
     private $atmMinBound;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="atmMaxDay", type="float")
+     */
+    private $atmMaxDay;
 
     /**
      * @var float
@@ -103,6 +124,23 @@ class PayLimits
     public function getMobileMaxBound()
     {
         return $this->mobileMaxBound;
+    }
+
+    public function setMobileMaxDay($mobileMaxDay)
+    {
+        $this->mobileMaxDay = $mobileMaxDay;
+
+        return $this;
+    }
+
+    /**
+     * Get mobileMaxDay
+     *
+     * @return float
+     */
+    public function getMobileMaxDay()
+    {
+        return $this->mobileMaxDay;
     }
 
     /**
@@ -153,6 +191,23 @@ class PayLimits
         return $this->internetMaxBound;
     }
 
+    public function setInternetMaxDay($internetMaxDay)
+    {
+        $this->internetMaxDay = $internetMaxDay;
+
+        return $this;
+    }
+
+    /**
+     * Get internetMaxDay
+     *
+     * @return float
+     */
+    public function getInternetMaxDay()
+    {
+        return $this->internetMaxDay;
+    }
+
     /**
      * Set internetMinBound
      *
@@ -199,6 +254,24 @@ class PayLimits
     public function getAtmMaxBound()
     {
         return $this->atmMaxBound;
+    }
+
+
+    public function setAtmMaxDay($atmMaxDay)
+    {
+        $this->atmMaxDay = $atmMaxDay;
+
+        return $this;
+    }
+
+    /**
+     * Get atmMaxDay
+     *
+     * @return float
+     */
+    public function getAtmMaxDay()
+    {
+        return $this->atmMaxDay;
     }
 
     /**

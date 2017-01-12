@@ -18,6 +18,10 @@
 							<div class="dash_block">-</div>
 							<input class="bound" type="number" min="0" required="true" placeholder="До" name="mobileMax" value="{{ limits.mobileMaxBound }}">
 						</div>
+						<div class="all_day_wrap">
+							<div class="all_day_text">Ограничение в сутки:</div>
+							<input class="day_limit" type="number" min="0" name="mobileMaxDay" placeholder="Максимум" value="{{ limits.mobileMaxDay}}">
+						</div>
 					</div>
 
 					<div class="internet_bounds bounds">
@@ -29,6 +33,10 @@
 							<div class="dash_block">-</div>
 							<input class="bound" type="number" min="0" required="true" placeholder="До" name="internetMax" value="{{ limits.internetMaxBound }}">
 						</div>
+						<div class="all_day_wrap">
+							<div class="all_day_text">Ограничение в сутки:</div>
+							<input class="day_limit" type="number" min="0" name="internetMaxDay" placeholder="Максимум" value="{{ limits.internetMaxDay}}">
+						</div>
 					</div>
 
 					<div class="atm_bounds bounds">
@@ -39,6 +47,10 @@
 							<input class="bound" type="number" min="0" required="true" placeholder="От" name="atmMin" value="{{ limits.atmMinBound }}">
 							<div class="dash_block">-</div>
 							<input class="bound" type="number" min="0" required="true" placeholder="До" name="atmMax" value="{{ limits.atmMaxBound }}">
+						</div>
+						<div class="all_day_wrap">
+							<div class="all_day_text">Ограничение в сутки:</div>
+							<input class="day_limit" type="number" min="0" name="atmMaxDay" placeholder="Максимум" value="{{ limits.atmMaxDay}}">
 						</div>
 					</div>
 

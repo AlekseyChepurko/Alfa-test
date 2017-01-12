@@ -78,7 +78,11 @@ class AdminController extends Controller
                 $request->get("atmMax"),
                 $request->get("atmMin"))
                 );
-        
+
+        $limits->setMobileMaxDay($request->get("mobileMaxDay"));
+        $limits->setInternetMaxDay($request->get("internetMaxDay"));
+        $limits->setAtmMaxDay($request->get("atmMaxDay"));
+
         $limits->setSummaryMaxBound($request->get("summaryMaxBound"));
 
         $em->persist($limits);
