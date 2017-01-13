@@ -38,9 +38,9 @@ class Pay
     /**
      * @var string
      *
-     * @ORM\Column(name="payType", type="string", length=255)
+     * @ORM\Column(name="payWay", type="string", length=255)
      */
-    private $payType;
+    private $payWay;
 
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="pays")
@@ -118,27 +118,27 @@ class Pay
     }
 
     /**
-     * Set payType
+     * Set payWay
      *
-     * @param string $payType
+     * @param string $payWay
      *
      * @return Pay
      */
-    public function setPayType($payType)
+    public function setPayWay($payWay)
     {
-        $this->payType = $payType;
+        $this->payWay = $payWay;
 
         return $this;
     }
 
     /**
-     * Get payType
+     * Get payWay
      *
      * @return string
      */
-    public function getPayType()
+    public function getPayWay()
     {
-        return $this->payType;
+        return $this->payWay;
     }
 }
 

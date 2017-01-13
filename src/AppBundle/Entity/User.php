@@ -21,7 +21,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Pay", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="Pay", mappedBy="user", cascade={"persist"})
      */
     private $pays;
 
@@ -95,5 +95,10 @@ class User extends BaseUser
         parent::__construct();
 
         $this->pays = new ArrayCollection();
+
+        $this->mobileSum = 0;
+        $this->atmSum = 0;
+        $this->internetSum = 0;
+
     }
 }
