@@ -7,16 +7,22 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet"
             href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{asset('assets/styles/header.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/styles/header.css')}}">
         <link rel="stylesheet" href="{{asset('assets/styles/footer.css')}}">
         <link rel="stylesheet" href="{{asset('assets/styles/main.css')}}">
     </head>
     <body>
         <header>
             
-            <img class= "header_logo" src="http://toplogos.ru/images/thumbs/preview-logo-alfa-bank.jpg"  alt="Логотип Альфа-Банк" />
+            <img class= "header_logo" src="{{ asset('assets/images/alfa-bank-logo.jpg')}}"  alt="Логотип Альфа-Банк" />
             <div class="header_text_wrap">
-                <p class = "header_text">AlfaBank test task</p>
+                <p class = "header_text">
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        Добро пожаловать, {{ app.user.username }}
+                    {% else %}
+                        Добро пожаловать!
+                    {% endif %}
+                </p>
             </div>
     </header>
 

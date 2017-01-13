@@ -6,14 +6,14 @@ header{
 	margin: 0 auto 50px auto;
 	border-bottom:  7px solid #C24438;
 }
-	// align-items: center;
 
-
-.header_logo, .header_text_wrap {
-	margin: 0 20px;
-
+.header_text_wrap{
+	position: relative;
+	width: 200px;
 }
 
 .header_text {
-	margin-top: 57.5%;
+	right: 0;
+	bottom: 0;
+	position: absolute;
 }
