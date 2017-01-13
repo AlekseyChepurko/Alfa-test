@@ -42,6 +42,22 @@ class Pay
      */
     private $payType;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="pays")
+     */
+    private $user;
+
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    public function setUser(\AppBundle\Entity\User $user)
+    {
+        $this->user = $user;
+        return $this;
+    }
+
 
     /**
      * Get id

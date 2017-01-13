@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -19,9 +20,80 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Pay", mappedBy="user")
+     */
+    private $pays;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="mobileSum", type="float")
+     */
+    private $mobileSum;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="internetSum", type="float")
+     */
+    private $internetSum;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="atmSum", type="float")
+     */
+    private $atmSum;
+
+    public function getAtmSum()
+    {
+        return $this->atmSum;
+    }
+
+    public function setAtmSum($sum)
+    {
+        $this->atmSum = $sum;
+        return $this;
+    }
+
+    public function getInternetSum()
+    {
+        return $this->internetSum;
+    }
+
+    public function setInternetSum($sum)
+    {
+        $this->internetSum = $sum;
+        return $this;
+    }
+
+    public function getMobileSum()
+    {
+        return $this->mobileSum;
+    }
+
+    public function setMobileSum($sum)
+    {
+        $this->mobileSum = $sum;
+        return $this;
+    }
+
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
+    public function addPay(\AppBundle\Entity\Pay $pay)
+    {
+        $this->pays[] = $pay;
+        return $this;
+    }
+
     public function __construct()
     {
         parent::__construct();
-        // your own logic
+
+        $this->pays = new ArrayCollection();
     }
 }
