@@ -8,3 +8,8 @@ admin:
   prefix: /admin
   resource: "@AppBundle/routing/admin_routes.yml"
   type: yaml
+
+pay:
+  prefix: /send_pay
+  resource: "@AppBundle/routing/pay_routes.yml"
+  type: yaml
