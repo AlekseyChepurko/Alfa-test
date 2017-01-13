@@ -10,6 +10,6 @@ admin:
   type: yaml
 
 pay:
-  prefix: /send_pay
+  prefix: /pay
   resource: "@AppBundle/routing/pay_routes.yml"
   type: yaml
