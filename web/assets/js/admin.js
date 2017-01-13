@@ -24,7 +24,7 @@ $(document).ready(function () {
 				}, 1000);
 			},
 
-			fail: function (respone) {
+			error: function (respone) {
 				$(".wait_text").toggle();
 				$(".fail_text").toggle();	
 

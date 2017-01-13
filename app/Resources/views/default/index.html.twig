@@ -4,7 +4,6 @@
     <div id="wrapper">
         <div id="container">
             <form action="/pay/send" class="pay_form">
-                <input class=""  type="number" name="user_id" required disabled value="{{ app.user.id | default('-1')}}">    
                 <div class="pay_wrap">
                     <div class="choose_pay_way_text">
                         Выберите предполагаемый способ оплаты, с помощью которого был произведен платеж:
@@ -47,13 +46,19 @@
                     <input type="number"  name="pay_sum" min="0" placeholder="Введите сумму платежа" required="true" autofocus>
                 </div>
         
-                <button class="send_pay_btn">
-                    <span class="send_pay_text">Эмулировать</span>
-                </button>
-
-                <div class="response_text">
-                    
+                <div class="response_text_wrap">
+                    <div class="response_text">
+                        
+                    </div>
                 </div>
+
+                <button class="send_pay_btn">
+                    <span class="send_text send_pay_text">Отправить</span>
+                    <span class="send_text send_pay_text_wait hidden_block">Подождите...</span>
+                    <span class="send_text send_pay_text_error hidden_block">Ошибка!</span>
+                    <span class="send_text send_pay_text_ok hidden_block">Одобрено!</span>
+                </button>
+                
 
             </form>
         </div>
