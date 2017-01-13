@@ -46,6 +46,25 @@ class User extends BaseUser
      */
     private $atmSum;
 
+    /**
+     * @var \LastPay
+     *
+     * @ORM\Column(name="lastPay", type="date")
+     */
+    private $lastPay;
+
+    public function getLastPay()
+    {
+        return $this->lastPay;
+    }
+
+    public function setLastPay($date)
+    {
+        $this->lastPay = $date;
+
+        return $this;
+    }
+
     public function getAtmSum()
     {
         return $this->atmSum;

@@ -29,9 +29,9 @@ class Pay
     private $summ;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
-     * @ORM\Column(name="date", type="datetimetz")
+     * @ORM\Column(name="date", type="date")
      */
     private $date;
 
@@ -96,7 +96,7 @@ class Pay
     /**
      * Set date
      *
-     * @param \DateTime $date
+     * @param \Date $date
      *
      * @return Pay
      */

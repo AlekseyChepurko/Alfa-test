@@ -1,22 +1,22 @@
 $(document).ready(function () {		
 
-	// $(".pay_form").submit(function (e) {
-	// 	e.preventDefault();
-		
-	// 	var form = $(".pay_form").serialize();
+	$(".pay_form").submit(function (e) {
+		e.preventDefault();
 
-	// 	$.post({
-	// 		data: form,
-	// 		url: "/pay/send",
+		var form = $(".pay_form").serialize();
 
-	// 		success: function (response) {
-	// 			console.log("ok");
-	// 		},
+		$.post({
+			data: form,
+			url: "/pay/send",
 
-	// 		fail: function (response) {
-	// 			console.log("bad");
-	// 		}
-	// 	});
-	// });
+			success: function (response) {
+				console.log(response["errorMessage"]);
+			},
+
+			fail: function (response) {
+				console.log(response["message"]);
+			}
+		});
+	});
 
 });
