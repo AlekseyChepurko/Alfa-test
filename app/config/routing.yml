@@ -4,12 +4,12 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-admin:
-  prefix: /admin
-  resource: "@AppBundle/routing/admin_routes.yml"
-  type: yaml
-
 pay:
   prefix: /pay
   resource: "@AppBundle/routing/pay_routes.yml"
+  type: yaml
+  
+admin:
+  prefix: /admin
+  resource: "@AppBundle/routing/admin_routes.yml"
   type: yaml
