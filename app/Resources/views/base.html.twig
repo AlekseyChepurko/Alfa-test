@@ -13,16 +13,29 @@
     </head>
     <body>
         <header>
-            
-            <img class= "header_logo" src="{{ asset('assets/images/alfa-bank-logo.jpg')}}"  alt="Логотип Альфа-Банк" />
-            <div class="header_text_wrap">
-                <p class = "header_text">
-                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        Добро пожаловать, {{ app.user.username }}
-                    {% else %}
-                        Добро пожаловать!
-                    {% endif %}
-                </p>
+            <div class="header_top_wrap">
+                <img class= "header_logo" src="{{ asset('assets/images/alfa-bank-logo.jpg')}}"  alt="Логотип Альфа-Банк" />
+                <div class="header_text_wrap">
+                    <p class = "header_text">
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                            Добро пожаловать, {{ app.user.username }}
+                        {% else %}
+                            Добро пожаловать!
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="split_line">
+            </div>
+
+            <div class="auth_wrap">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a href="/logout" class="auth_link">Выйти</a>
+                {% else %}
+                    <a href="/register" class="auth_link">Зарегистрироваться!</a>
+                    <a href="/login" class="auth_link">Войти</a>
+                {% endif %}
             </div>
     </header>
 
