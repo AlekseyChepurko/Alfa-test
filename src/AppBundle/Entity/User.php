@@ -119,5 +119,7 @@ class User extends BaseUser
         $this->atmSum = 0;
         $this->internetSum = 0;
 
+        $this->lastPay = date_create(date("m.d.y"));
+
     }
 }
