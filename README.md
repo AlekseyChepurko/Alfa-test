@@ -4,5 +4,6 @@
 Данный проект реализован с помощью фреймворка Symfony.
 
 Данные для входа в админ-панель
-login: adminuser
-password: admin
+
+* login: adminuser
+* password: admin
