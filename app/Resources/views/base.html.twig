@@ -41,9 +41,15 @@
 
         {% block body %}{% endblock %}
         <footer>
-            <p class = "footer_text">
-                Created by Aleksey Chepurko
-            </p>
+            <div class="footer_content_wrap">
+                <p class = "footer_text">
+                    Created by Aleksey Chepurko
+                </p>
+
+                <a href="https://github.com/AlekseyChepurko/Alfa-test" class="github_link">
+                    <img src="{{ asset('assets/images/git.png') }}" alt="" class="github_image">
+                </a>
+            </div>
         </footer>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
